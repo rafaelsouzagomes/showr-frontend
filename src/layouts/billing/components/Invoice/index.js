@@ -23,6 +23,8 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+import './teste.css';
+
 function Invoice({ date, id, price, noGutter }) {
   return (
     <MDBox
@@ -34,6 +36,9 @@ function Invoice({ date, id, price, noGutter }) {
       pr={1}
       mb={noGutter ? 0 : 1}
     >
+      <div className="teste" >
+        <h2  > Testando</h2>
+      </div>
       <MDBox lineHeight={1.125}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {date}

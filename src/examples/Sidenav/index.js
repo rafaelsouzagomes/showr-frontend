@@ -1,27 +1,9 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useEffect } from "react";
 
-// react-router-dom components
 import { useLocation, NavLink } from "react-router-dom";
 
-// prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// @mui material components
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
@@ -30,7 +12,7 @@ import Icon from "@mui/material/Icon";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
+// import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
@@ -49,7 +31,7 @@ import {
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useMaterialUIController();
-  const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
+  const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
   const location = useLocation();
   const collapseName = location.pathname.replace("/", "");
 
@@ -180,7 +162,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       />
       <List>{renderRoutes}</List>
       <MDBox p={2} mt="auto">
-        <MDButton
+        {/* <MDButton
           component="a"
           href="https://www.creative-tim.com/product/material-dashboard-pro-react"
           target="_blank"
@@ -189,20 +171,18 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           color={sidenavColor}
           fullWidth
         >
-          upgrade to pro
-        </MDButton>
+          ssssssss
+        </MDButton> */}
       </MDBox>
     </SidenavRoot>
   );
 }
 
-// Setting default values for the props of Sidenav
 Sidenav.defaultProps = {
   color: "info",
   brand: "",
 };
 
-// Typechecking props for the Sidenav
 Sidenav.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   brand: PropTypes.string,
